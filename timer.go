@@ -33,7 +33,7 @@ func timer() {
 	}
 
 	for {
-		time.Sleep(2000)
+		time.Sleep(time.Minute*2)
 
 		ActDay := int(time.Now().Weekday())
 		if Day != ActDay {
@@ -120,7 +120,7 @@ func AtMinute(lesson string) {
 	if lesson != "0" {
 		_, _ = dg.ChannelMessageSendTTS(channelID, buff)
 	}
-	time.Sleep(60000)
+	time.Sleep(time.Minute)
 }
 
 func Break(lesson string, LenghtOfBreak string, TimeOfNext string) {
@@ -129,5 +129,5 @@ func Break(lesson string, LenghtOfBreak string, TimeOfNext string) {
 	if lesson != "0" {
 		_, _ = dg.ChannelMessageSendTTS(channelID, buff)
 	}
-	time.Sleep(60000)
+	time.Sleep(time.Minute)
 }
