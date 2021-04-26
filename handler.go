@@ -55,6 +55,7 @@ func main() {
 	fmt.Println(time.Now().Date())
 
 	go timer()
+	go status()
 
 	<-make(chan struct{})
 
